@@ -6,11 +6,20 @@
 
 .navbar li { color: #000 } 
 
+div#banner {
+  background-image: url("http://www.balkangamingarena.com/statistika/hlstatsimg/hl_banner.png");
+  width: 983;
+  height: 236;
+}
+
 body {
     background: black;
 }
+<<<<<<< HEAD
  div#banner{ 
      max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
 }
+=======
+>>>>>>> 91db2291f6c46f235858022201212d29aca13a44
