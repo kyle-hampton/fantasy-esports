@@ -7,6 +7,12 @@
 
 .navbar li { color: #000 } 
 
+div#banner {
+  background-image: url("http://www.balkangamingarena.com/statistika/hlstatsimg/hl_banner.png");
+  width: 983;
+  height: 236;
+}
+
 body {
     background: black;
 }
