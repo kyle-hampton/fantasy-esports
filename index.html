@@ -1,5 +1,42 @@
 <html>
     <head>
+        <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Avg points', 10],
+          ['Kills', 1],
+          ['Avg points', 1],
+          ['Shots Fired', 1],
+          ['Wins', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Player Stats',
+                       'width':300,
+                       'height':500};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
         <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -44,33 +81,31 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<<<<<<< HEAD
+
         
-            <div class="col-md-8" id="banner">
-=======
-            <div class="col-md-8" id="banner">
-		<!--
->>>>>>> 91db2291f6c46f235858022201212d29aca13a44
-                <img src="http://www.balkangamingarena.com/statistika/hlstatsimg/hl_banner.png">
-		-->
-                
+     
+            <div class="col-md-3" >
+              
             </div>
-        <div class="col-md-2">
+        
+        <div class="col-md-6" id="banner">
+            <img src="http://www.balkangamingarena.com/statistika/hlstatsimg/hl_banner.png">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
         </div>
         
-      <div class="row">
-          <div class="col-md-8">
-        <iframe src="https://player.twitch.tv/?channel=izakooo" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/izakooo?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from IzakOOO on www.twitch.tv</a>
+     <div class="row">
+          <div class="col-md-6">
+        <iframe src="https://player.twitch.tv/?channel=esl_csgo" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/esl_csgo?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from ESL_CSGO on www.twitch.tv</a>>Watch live video from IzakOOO on www.twitch.tv</a>
           </div>
-       <div class="col-md-2">
-            <iframe src="https://www.twitch.tv/izakooo/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe>
+       <div class="col-md-3">
+            <iframe src="https://www.twitch.tv/esl_csgo/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe>
           </div>
-       <div class="col-md-2">
-           
+        <div class="col-md-3">
+            <!--Div that will hold the pie chart-->
+                <div id="chart_div"></div>
           </div>
-        </div>
+      
          <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
