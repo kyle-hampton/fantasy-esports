@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
 body{
     background-color:#1F274A;
+=======
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar li { color: #000 } 
+
+body {
+    background: black;
+>>>>>>> 322808c7b2ade33d9ef83e273ee387cbbb1a7c1f
 }
